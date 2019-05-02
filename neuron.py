@@ -44,7 +44,7 @@ def backpropagate(outputneuron,error):
    for x in range(len(outputneuron)):
        outputneuron[x].backprop(error[x])
    for i in p.neus:
-       if i.inpu==False:
+       if i.inpu==False and i.bias==None:
            i.changeweight()
 def train(outputneuron,inputdata,outputdata):
     error=0
